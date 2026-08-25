@@ -96,6 +96,18 @@
             <version>2.8.6</version> <!-- or higher -->
         </dependency>
 
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>swagger-ui</artifactId>
+            <version>5.20.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.2</version> <!-- Use the latest stable version -->
+        </dependency>
+
 
 
         <!-- Lombok -->

@@ -19,6 +19,12 @@ public class MovieController {
         this.movieService = movieService;
     }
 
+    @GetMapping("/movielist")
+    public ResponseEntity<List<Movie>> getAllMoviesList(){
+
+        return ResponseEntity.ok(movieService.getAllMovies());
+    }
+
     @GetMapping
     public ResponseEntity<List<Movie>> getAllMovies(
             @RequestParam(required = false) String genre,
@@ -29,8 +35,8 @@ public class MovieController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Movie> getMovieById(@PathVariable Long id) {
-        return ResponseEntity.ok(movieService.getMovieById(id));
+    public ResponseEntity<String> getMovieById(@PathVariable Long id) {
+        return ResponseEntity.ok("movie1");
     }
 
     @PostMapping

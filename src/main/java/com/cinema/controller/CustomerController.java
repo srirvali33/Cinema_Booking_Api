@@ -21,6 +21,11 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
+    @GetMapping("/ping")
+    public ResponseEntity<String> ping() {
+        return ResponseEntity.ok("hello world!!");
+    }
+
     @GetMapping
     public ResponseEntity<List<Customer>> getAllCustomers() {
         return ResponseEntity.ok(customerService.getAllCustomers());

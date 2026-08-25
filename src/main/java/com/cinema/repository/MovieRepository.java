@@ -34,6 +34,7 @@ public class MovieRepository {
 //            .releaseDate(rs.getDate("release_date") != null
 //                    ? rs.getDate("release_date").toString() : null)
             .description(rs.getString("description"))
+            .image(rs.getString("image"))
             .build();
 
     public List<Movie> findAll() {
